@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		9F86AAC1250CF84400C88885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC0250CF84400C88885 /* AppDelegate.swift */; };
 		9F86AAC3250CF84400C88885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC2250CF84400C88885 /* SceneDelegate.swift */; };
-		9F86AAC5250CF84400C88885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC4250CF84400C88885 /* ViewController.swift */; };
+		9F86AAC5250CF84400C88885 /* CoinFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC4250CF84400C88885 /* CoinFeedViewController.swift */; };
 		9F86AAC8250CF84500C88885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AAC6250CF84500C88885 /* Main.storyboard */; };
 		9F86AACA250CF84900C88885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AAC9250CF84900C88885 /* Assets.xcassets */; };
 		9F86AACD250CF84900C88885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AACB250CF84900C88885 /* LaunchScreen.storyboard */; };
 		9F86AAD8250CF84A00C88885 /* CoinFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAD7250CF84A00C88885 /* CoinFeedTests.swift */; };
 		9F86AAE3250CF84A00C88885 /* CoinFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAE2250CF84A00C88885 /* CoinFeedUITests.swift */; };
+		9F86AAF8250CFEC800C88885 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAF6250CFEC800C88885 /* CoinTableViewCell.swift */; };
+		9F86AAF9250CFEC800C88885 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AAF7250CFEC800C88885 /* CoinTableViewCell.xib */; };
+		9F86AAFD250D002F00C88885 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAFC250D002F00C88885 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		9F86AABD250CF84400C88885 /* CoinFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F86AAC0250CF84400C88885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F86AAC2250CF84400C88885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F86AAC4250CF84400C88885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F86AAC4250CF84400C88885 /* CoinFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFeedViewController.swift; sourceTree = "<group>"; };
 		9F86AAC7250CF84500C88885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F86AAC9250CF84900C88885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F86AACC250CF84900C88885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		9F86AADE250CF84A00C88885 /* CoinFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F86AAE2250CF84A00C88885 /* CoinFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFeedUITests.swift; sourceTree = "<group>"; };
 		9F86AAE4250CF84A00C88885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F86AAF6250CFEC800C88885 /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		9F86AAF7250CFEC800C88885 /* CoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
+		9F86AAFC250D002F00C88885 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		9F86AABF250CF84400C88885 /* CoinFeed */ = {
 			isa = PBXGroup;
 			children = (
+				9F86AAFA250D001800C88885 /* Helpers */,
 				9F86AAF2250CF88400C88885 /* Project Files */,
 				9F86AAF1250CF87F00C88885 /* Models */,
 				9F86AAF0250CF87800C88885 /* Views */,
@@ -127,6 +134,7 @@
 		9F86AAF0250CF87800C88885 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F86AAF5250CFEAB00C88885 /* Cells */,
 				9F86AAF4250CF8A000C88885 /* Storyboards */,
 				9F86AAF3250CF89900C88885 /* ViewControllers */,
 				9F86AAC9250CF84900C88885 /* Assets.xcassets */,
@@ -154,7 +162,7 @@
 		9F86AAF3250CF89900C88885 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9F86AAC4250CF84400C88885 /* ViewController.swift */,
+				9F86AAC4250CF84400C88885 /* CoinFeedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +174,31 @@
 				9F86AACB250CF84900C88885 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9F86AAF5250CFEAB00C88885 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F86AAF6250CFEC800C88885 /* CoinTableViewCell.swift */,
+				9F86AAF7250CFEC800C88885 /* CoinTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F86AAFA250D001800C88885 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F86AAFB250D002000C88885 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9F86AAFB250D002000C88885 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F86AAFC250D002F00C88885 /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +307,7 @@
 			files = (
 				9F86AACD250CF84900C88885 /* LaunchScreen.storyboard in Resources */,
 				9F86AACA250CF84900C88885 /* Assets.xcassets in Resources */,
+				9F86AAF9250CFEC800C88885 /* CoinTableViewCell.xib in Resources */,
 				9F86AAC8250CF84500C88885 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,8 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F86AAC5250CF84400C88885 /* ViewController.swift in Sources */,
+				9F86AAC5250CF84400C88885 /* CoinFeedViewController.swift in Sources */,
 				9F86AAC1250CF84400C88885 /* AppDelegate.swift in Sources */,
+				9F86AAFD250D002F00C88885 /* UITableView+Extension.swift in Sources */,
+				9F86AAF8250CFEC800C88885 /* CoinTableViewCell.swift in Sources */,
 				9F86AAC3250CF84400C88885 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
