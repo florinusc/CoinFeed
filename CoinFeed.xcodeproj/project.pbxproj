@@ -24,6 +24,10 @@
 		9F86AB07250D163E00C88885 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB06250D163E00C88885 /* CustomError.swift */; };
 		9F86AB09250D16E700C88885 /* CoinFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB08250D16E700C88885 /* CoinFeedViewModel.swift */; };
 		9F86AB0B250D39E400C88885 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB0A250D39E400C88885 /* CoinViewModel.swift */; };
+		9F86AB0D250D3E9700C88885 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB0C250D3E9700C88885 /* UIViewController+Extension.swift */; };
+		9F86AB0F250D428E00C88885 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB0E250D428E00C88885 /* Int+Extension.swift */; };
+		9F86AB11250D443C00C88885 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB10250D443C00C88885 /* Double+Extension.swift */; };
+		9F86AB13250D456D00C88885 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB12250D456D00C88885 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		9F86AB06250D163E00C88885 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		9F86AB08250D16E700C88885 /* CoinFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFeedViewModel.swift; sourceTree = "<group>"; };
 		9F86AB0A250D39E400C88885 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
+		9F86AB0C250D3E9700C88885 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9F86AB0E250D428E00C88885 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		9F86AB10250D443C00C88885 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		9F86AB12250D456D00C88885 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +222,10 @@
 			isa = PBXGroup;
 			children = (
 				9F86AAFC250D002F00C88885 /* UITableView+Extension.swift */,
+				9F86AB0C250D3E9700C88885 /* UIViewController+Extension.swift */,
+				9F86AB0E250D428E00C88885 /* Int+Extension.swift */,
+				9F86AB10250D443C00C88885 /* Double+Extension.swift */,
+				9F86AB12250D456D00C88885 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,16 +371,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F86AB0D250D3E9700C88885 /* UIViewController+Extension.swift in Sources */,
 				9F86AAC5250CF84400C88885 /* CoinFeedViewController.swift in Sources */,
+				9F86AB11250D443C00C88885 /* Double+Extension.swift in Sources */,
 				9F86AB03250D153900C88885 /* MockRepository.swift in Sources */,
 				9F86AAC1250CF84400C88885 /* AppDelegate.swift in Sources */,
 				9F86AAFD250D002F00C88885 /* UITableView+Extension.swift in Sources */,
 				9F86AAF8250CFEC800C88885 /* CoinTableViewCell.swift in Sources */,
+				9F86AB0F250D428E00C88885 /* Int+Extension.swift in Sources */,
 				9F86AB09250D16E700C88885 /* CoinFeedViewModel.swift in Sources */,
 				9F86AB07250D163E00C88885 /* CustomError.swift in Sources */,
 				9F86AAC3250CF84400C88885 /* SceneDelegate.swift in Sources */,
 				9F86AB0B250D39E400C88885 /* CoinViewModel.swift in Sources */,
 				9F86AB05250D156F00C88885 /* Coin.swift in Sources */,
+				9F86AB13250D456D00C88885 /* String+Extension.swift in Sources */,
 				9F86AB01250D153000C88885 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

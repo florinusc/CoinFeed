@@ -27,8 +27,8 @@ class CoinFeedViewController: UIViewController {
         setUp()
         delegate?.viewDidLoad { [weak self] error in
             if let error = error {
-                // present error alert
-                
+                self?.presentAlert(for: error)
+                return
             }
             self?.tableView.reloadData()
         }

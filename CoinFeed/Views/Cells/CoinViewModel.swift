@@ -21,10 +21,10 @@ struct CoinViewModel {
     // MARK: - Lifecycle
     init(coin: Coin) {
         name = coin.name
-        rank = String(coin.rank)
-        totalSupply = String(coin.totalSupply)
-        maxSupply = String(coin.maxSupply)
-        price = String(coin.price)
-        lastUpdated = coin.lastUpdated
+        rank = coin.rank.rankString
+        totalSupply = "Total: " + coin.totalSupply.stringWithSeparator
+        maxSupply = "Max: " + coin.maxSupply.stringWithSeparator
+        price = coin.price.formattedPrice
+        lastUpdated = "Last updated: " + (coin.lastUpdated.prettyDate ?? "Error")
     }
 }
