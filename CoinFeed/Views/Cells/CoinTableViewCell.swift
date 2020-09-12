@@ -18,4 +18,13 @@ class CoinTableViewCell: UITableViewCell {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var lastUpdatedLabel: UILabel!
     
+    // MARK: - Public functions
+    func setUp(with viewModel: CoinViewModel) {
+        nameLabel.text = viewModel.name
+        rankLabel.text = viewModel.rank
+        totalSupplyLabel.text = viewModel.totalSupply
+        maxSupplyLabel.text = viewModel.maxSupply
+        priceLabel.text = viewModel.price
+        lastUpdatedLabel.text = viewModel.lastUpdated
+    }
 }
