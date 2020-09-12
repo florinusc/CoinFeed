@@ -10,6 +10,7 @@ import UIKit
 
 class CoinFeedViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Lifecycle
@@ -20,8 +21,21 @@ class CoinFeedViewController: UIViewController {
     
     // MARK: - Private methods
     private func setUp() {
+        setUpNavBar()
+        setUpTableView()
+    }
+    
+    private func setUpNavBar() {
+        title = "Coins"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    private func setUpTableView() {
         tableView.register(CoinTableViewCell.self)
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = CGFloat.leastNonzeroMagnitude
     }
     
 }
