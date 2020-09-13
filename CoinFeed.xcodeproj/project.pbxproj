@@ -13,7 +13,6 @@
 		9F86AAC8250CF84500C88885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AAC6250CF84500C88885 /* Main.storyboard */; };
 		9F86AACA250CF84900C88885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AAC9250CF84900C88885 /* Assets.xcassets */; };
 		9F86AACD250CF84900C88885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AACB250CF84900C88885 /* LaunchScreen.storyboard */; };
-		9F86AAD8250CF84A00C88885 /* CoinFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAD7250CF84A00C88885 /* CoinFeedTests.swift */; };
 		9F86AAE3250CF84A00C88885 /* CoinFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAE2250CF84A00C88885 /* CoinFeedUITests.swift */; };
 		9F86AAF8250CFEC800C88885 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAF6250CFEC800C88885 /* CoinTableViewCell.swift */; };
 		9F86AAF9250CFEC800C88885 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F86AAF7250CFEC800C88885 /* CoinTableViewCell.xib */; };
@@ -28,6 +27,7 @@
 		9F86AB0F250D428E00C88885 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB0E250D428E00C88885 /* Int+Extension.swift */; };
 		9F86AB11250D443C00C88885 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB10250D443C00C88885 /* Double+Extension.swift */; };
 		9F86AB13250D456D00C88885 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB12250D456D00C88885 /* String+Extension.swift */; };
+		9F86AB15250DE8DD00C88885 /* CoinViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AB14250DE8DD00C88885 /* CoinViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		9F86AACC250CF84900C88885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F86AACE250CF84900C88885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F86AAD3250CF84A00C88885 /* CoinFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F86AAD7250CF84A00C88885 /* CoinFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFeedTests.swift; sourceTree = "<group>"; };
 		9F86AAD9250CF84A00C88885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F86AADE250CF84A00C88885 /* CoinFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F86AAE2250CF84A00C88885 /* CoinFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFeedUITests.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		9F86AB0E250D428E00C88885 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		9F86AB10250D443C00C88885 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		9F86AB12250D456D00C88885 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9F86AB14250DE8DD00C88885 /* CoinViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 		9F86AAD6250CF84A00C88885 /* CoinFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				9F86AAD7250CF84A00C88885 /* CoinFeedTests.swift */,
 				9F86AAD9250CF84A00C88885 /* Info.plist */,
+				9F86AB14250DE8DD00C88885 /* CoinViewModelTests.swift */,
 			);
 			path = CoinFeedTests;
 			sourceTree = "<group>";
@@ -393,7 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F86AAD8250CF84A00C88885 /* CoinFeedTests.swift in Sources */,
+				9F86AB15250DE8DD00C88885 /* CoinViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
