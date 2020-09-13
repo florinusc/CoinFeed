@@ -16,7 +16,7 @@ class MockRepository: Repository {
         self.returnError = returnError
     }
     
-    func getCoins(completion handler: (Result<[Coin], Error>) -> Void) {
+    func getCoins(completion handler: @escaping (Result<[Coin], Error>) -> Void) {
         if returnError {
             handler(.failure(CustomError.general))
             return

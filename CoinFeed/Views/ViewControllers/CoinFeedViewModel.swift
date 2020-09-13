@@ -33,7 +33,7 @@ final class CoinFeedViewModel: ViewModel {
     }
     
     // MARK: - Private functions
-    private func getData(completion handler: (Error?) -> Void) {
+    private func getData(completion handler: @escaping (Error?) -> Void) {
         repository.getCoins { [weak self] (result) in
             switch result {
             case .failure(let error):
@@ -47,7 +47,7 @@ final class CoinFeedViewModel: ViewModel {
 }
 
 extension CoinFeedViewModel: CoinFeedViewDelegate {
-    func viewDidLoad(completion handler: (Error?) -> Void) {
+    func viewDidLoad(completion handler: @escaping (Error?) -> Void) {
         getData(completion: handler)
     }
 }

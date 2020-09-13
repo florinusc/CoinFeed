@@ -10,6 +10,10 @@
 		9F3EF094250E4E50006A7D9B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF093250E4E50006A7D9B /* Storyboarded.swift */; };
 		9F3EF096250E4E64006A7D9B /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF095250E4E64006A7D9B /* ViewModelBased.swift */; };
 		9F3EF098250E6369006A7D9B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF097250E6369006A7D9B /* LoadingViewController.swift */; };
+		9F3EF09B250E642A006A7D9B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF09A250E642A006A7D9B /* SessionManager.swift */; };
+		9F3EF09D250E6433006A7D9B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF09C250E6433006A7D9B /* Request.swift */; };
+		9F3EF09F250E676A006A7D9B /* OnlineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF09E250E676A006A7D9B /* OnlineRepository.swift */; };
+		9F3EF0A2250E67C8006A7D9B /* CoinResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF0A1250E67C8006A7D9B /* CoinResource.swift */; };
 		9F86AAC1250CF84400C88885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC0250CF84400C88885 /* AppDelegate.swift */; };
 		9F86AAC3250CF84400C88885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC2250CF84400C88885 /* SceneDelegate.swift */; };
 		9F86AAC5250CF84400C88885 /* CoinFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC4250CF84400C88885 /* CoinFeedViewController.swift */; };
@@ -54,6 +58,10 @@
 		9F3EF093250E4E50006A7D9B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		9F3EF095250E4E64006A7D9B /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
 		9F3EF097250E6369006A7D9B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9F3EF09A250E642A006A7D9B /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		9F3EF09C250E6433006A7D9B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		9F3EF09E250E676A006A7D9B /* OnlineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineRepository.swift; sourceTree = "<group>"; };
+		9F3EF0A1250E67C8006A7D9B /* CoinResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinResource.swift; sourceTree = "<group>"; };
 		9F86AABD250CF84400C88885 /* CoinFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F86AAC0250CF84400C88885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F86AAC2250CF84400C88885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,24 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9F3EF099250E641D006A7D9B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F3EF0A0250E67BC006A7D9B /* Resources */,
+				9F3EF09A250E642A006A7D9B /* SessionManager.swift */,
+				9F3EF09C250E6433006A7D9B /* Request.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9F3EF0A0250E67BC006A7D9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F3EF0A1250E67C8006A7D9B /* CoinResource.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9F86AAB4250CF84400C88885 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +166,7 @@
 		9F86AABF250CF84400C88885 /* CoinFeed */ = {
 			isa = PBXGroup;
 			children = (
+				9F3EF099250E641D006A7D9B /* Network */,
 				9F86AAFE250D151E00C88885 /* Data */,
 				9F86AAFA250D001800C88885 /* Helpers */,
 				9F86AAF2250CF88400C88885 /* Project Files */,
@@ -252,6 +279,7 @@
 			children = (
 				9F86AB00250D153000C88885 /* Repository.swift */,
 				9F86AB02250D153900C88885 /* MockRepository.swift */,
+				9F3EF09E250E676A006A7D9B /* OnlineRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -391,10 +419,12 @@
 				9F86AB0D250D3E9700C88885 /* UIViewController+Extension.swift in Sources */,
 				9F86AAC5250CF84400C88885 /* CoinFeedViewController.swift in Sources */,
 				9F86AB11250D443C00C88885 /* Double+Extension.swift in Sources */,
+				9F3EF09B250E642A006A7D9B /* SessionManager.swift in Sources */,
 				9F86AB03250D153900C88885 /* MockRepository.swift in Sources */,
 				9F86AAC1250CF84400C88885 /* AppDelegate.swift in Sources */,
 				9F3EF098250E6369006A7D9B /* LoadingViewController.swift in Sources */,
 				9F86AAFD250D002F00C88885 /* UITableView+Extension.swift in Sources */,
+				9F3EF09F250E676A006A7D9B /* OnlineRepository.swift in Sources */,
 				9F86AAF8250CFEC800C88885 /* CoinTableViewCell.swift in Sources */,
 				9F86AB0F250D428E00C88885 /* Int+Extension.swift in Sources */,
 				9F86AB09250D16E700C88885 /* CoinFeedViewModel.swift in Sources */,
@@ -404,6 +434,8 @@
 				9F86AB0B250D39E400C88885 /* CoinViewModel.swift in Sources */,
 				9F86AB05250D156F00C88885 /* Coin.swift in Sources */,
 				9F86AB13250D456D00C88885 /* String+Extension.swift in Sources */,
+				9F3EF0A2250E67C8006A7D9B /* CoinResource.swift in Sources */,
+				9F3EF09D250E6433006A7D9B /* Request.swift in Sources */,
 				9F86AB01250D153000C88885 /* Repository.swift in Sources */,
 				9F3EF094250E4E50006A7D9B /* Storyboarded.swift in Sources */,
 			);

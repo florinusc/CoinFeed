@@ -15,4 +15,10 @@ struct Coin {
     let totalSupply: Int
     let maxSupply: Int
     let lastUpdated: String
+    
+    
+    static func from(_ resource: CoinResource) -> Coin? {
+        guard let price = resource.quotes["USD"]?.price else { return nil }
+        return Coin(name: resource.name, rank: resource.rank, price: price, totalSupply: resource.totalSupply, maxSupply: resource.maxSupply, lastUpdated: resource.lastUpdated)
+    }
 }

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let dogListViewController = CoinFeedViewController.getInstance(with: CoinFeedViewModel(repository: MockRepository()))
+        let dogListViewController = CoinFeedViewController.getInstance(with: CoinFeedViewModel(repository: OnlineRepository()))
         let navigationController = UINavigationController(rootViewController: dogListViewController)
         navigationController.navigationBar.tintColor = .label
         window?.rootViewController = navigationController

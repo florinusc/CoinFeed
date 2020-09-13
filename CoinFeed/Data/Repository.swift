@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Repository {
-    func getCoins(completion handler: (Result<[Coin], Error>) -> Void)
+    func getCoins(completion handler: @escaping (Result<[Coin], Error>) -> Void)
 }

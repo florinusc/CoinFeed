@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CoinFeedViewDelegate: class {
-    func viewDidLoad(completion handler: (Error?) -> Void)
+    func viewDidLoad(completion handler: @escaping (Error?) -> Void)
 }
 
 final class CoinFeedViewController: UIViewController {
@@ -54,13 +54,15 @@ final class CoinFeedViewController: UIViewController {
         let loadingViewController = LoadingViewController()
         add(loadingViewController)
         delegate?.viewDidLoad { [weak self] error in
-            if let error = error {
+            DispatchQueue.main.async { [weak self] in
+                if let error = error {
+                    loadingViewController.remove()
+                    self?.presentAlert(for: error)
+                    return
+                }
+                self?.tableView.reloadData()
                 loadingViewController.remove()
-                self?.presentAlert(for: error)
-                return
             }
-            self?.tableView.reloadData()
-            loadingViewController.remove()
         }
     }
     
