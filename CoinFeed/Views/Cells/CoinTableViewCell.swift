@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CoinTableViewCell: UITableViewCell {
+final class CoinTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var nameLabel: UILabel!

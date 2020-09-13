@@ -12,7 +12,7 @@ protocol CoinFeedViewDelegate: class {
     func viewDidLoad(completion handler: (Error?) -> Void)
 }
 
-class CoinFeedViewController: UIViewController {
+final class CoinFeedViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -27,13 +27,6 @@ class CoinFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-        delegate?.viewDidLoad { [weak self] error in
-            if let error = error {
-                self?.presentAlert(for: error)
-                return
-            }
-            self?.tableView.reloadData()
-        }
     }
     
     // MARK: - Private methods
@@ -41,6 +34,7 @@ class CoinFeedViewController: UIViewController {
         delegate = viewModel
         setUpNavBar()
         setUpTableView()
+        notifyViewModel()
     }
     
     private func setUpNavBar() {
@@ -54,6 +48,20 @@ class CoinFeedViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = CGFloat.leastNonzeroMagnitude
+    }
+    
+    private func notifyViewModel() {
+        let loadingViewController = LoadingViewController()
+        add(loadingViewController)
+        delegate?.viewDidLoad { [weak self] error in
+            if let error = error {
+                loadingViewController.remove()
+                self?.presentAlert(for: error)
+                return
+            }
+            self?.tableView.reloadData()
+            loadingViewController.remove()
+        }
     }
     
 }

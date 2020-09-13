@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CoinFeedViewModel: ViewModel {
+final class CoinFeedViewModel: ViewModel {
     
     // MARK: - Public variables
     var numberOfCoins: Int {
