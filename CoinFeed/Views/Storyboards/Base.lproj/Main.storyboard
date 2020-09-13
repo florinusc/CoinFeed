@@ -24,11 +24,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gEO-dg-Osy"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vy1-kC-0Ae">
+                                <rect key="frame" x="334" y="792" width="60" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwX-0h-LOC">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                        <state key="normal" title="Sort">
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedOnSortButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ciQ-Lq-cxP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dwX-0h-LOC" secondAttribute="trailing" id="6Ip-gH-ZGv"/>
+                                    <constraint firstItem="dwX-0h-LOC" firstAttribute="leading" secondItem="Vy1-kC-0Ae" secondAttribute="leading" id="Mth-UJ-rTo"/>
+                                    <constraint firstAttribute="width" constant="60" id="Nw4-eT-q7N"/>
+                                    <constraint firstAttribute="bottom" secondItem="dwX-0h-LOC" secondAttribute="bottom" id="lAw-l2-ufH"/>
+                                    <constraint firstAttribute="height" constant="40" id="mSl-kX-S22"/>
+                                    <constraint firstItem="dwX-0h-LOC" firstAttribute="top" secondItem="Vy1-kC-0Ae" secondAttribute="top" id="qhb-YC-a7y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vy1-kC-0Ae" secondAttribute="trailing" constant="20" id="4oz-Ou-hWB"/>
                             <constraint firstAttribute="bottom" secondItem="iIV-ez-NIX" secondAttribute="bottom" id="Vdf-gS-9uy"/>
                             <constraint firstItem="iIV-ez-NIX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bDs-YL-Dv6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vy1-kC-0Ae" secondAttribute="bottom" constant="30" id="d1x-L7-kqM"/>
                             <constraint firstItem="iIV-ez-NIX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="im4-eY-AjH"/>
                             <constraint firstItem="iIV-ez-NIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jVR-G7-7HY"/>
                         </constraints>

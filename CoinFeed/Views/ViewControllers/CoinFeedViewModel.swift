@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum SortingCriteria: String, CaseIterable {
+    case name, rank, price
+}
+
 final class CoinFeedViewModel: ViewModel {
     
     // MARK: - Public variables
@@ -30,6 +34,17 @@ final class CoinFeedViewModel: ViewModel {
     func coinViewModel(at index: Int) -> CoinViewModel? {
         guard index >= 0, index < coins.count else { return nil }
         return CoinViewModel(coin: coins[index])
+    }
+    
+    func sort(by criteria: SortingCriteria) {
+        switch criteria {
+        case .name:
+            coins.sort(by: { $0.name < $1.name })
+        case .rank:
+            coins.sort(by: { $0.rank < $1.rank })
+        case .price:
+            coins.sort(by: { $0.price > $1.price })
+        }
     }
     
     // MARK: - Private functions

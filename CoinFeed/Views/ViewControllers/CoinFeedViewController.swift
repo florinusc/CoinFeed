@@ -20,8 +20,11 @@ final class CoinFeedViewController: UIViewController {
     // MARK: - Public variables
     var viewModel: CoinFeedViewModel!
     
-    // MARK: - Private constants
+    // MARK: - Private variables
     private weak var delegate: CoinFeedViewDelegate?
+    
+    // MARK: - Private constants
+    private let refreshControl = UIRefreshControl()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -34,7 +37,7 @@ final class CoinFeedViewController: UIViewController {
         delegate = viewModel
         setUpNavBar()
         setUpTableView()
-        notifyViewModel()
+        notifyViewModelToFetchData()
     }
     
     private func setUpNavBar() {
@@ -48,12 +51,14 @@ final class CoinFeedViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = CGFloat.leastNonzeroMagnitude
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(notifyViewModelToFetchData), for: .valueChanged)
     }
     
-    private func notifyViewModel() {
+    @objc private func notifyViewModelToFetchData() {
         let loadingViewController = LoadingViewController()
         add(loadingViewController)
-        delegate?.viewDidLoad { [weak self] error in
+        delegate?.viewDidLoad { error in
             DispatchQueue.main.async { [weak self] in
                 if let error = error {
                     loadingViewController.remove()
@@ -61,9 +66,27 @@ final class CoinFeedViewController: UIViewController {
                     return
                 }
                 self?.tableView.reloadData()
+                self?.refreshControl.endRefreshing()
                 loadingViewController.remove()
             }
         }
+    }
+    
+    private func displaySortingAlert() {
+        let alert = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
+        for criteria in SortingCriteria.allCases {
+            let action = UIAlertAction(title: criteria.rawValue.capitalized, style: .default) { [weak self] _ in
+                self?.viewModel.sort(by: criteria)
+                self?.tableView.reloadData()
+            }
+            alert.addAction(action)
+        }
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func tappedOnSortButton() {
+        displaySortingAlert()
     }
     
 }
