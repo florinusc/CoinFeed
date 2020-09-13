@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CoinFeedViewModel {
+class CoinFeedViewModel: ViewModel {
     
     // MARK: - Public variables
     var numberOfCoins: Int {
@@ -19,7 +19,12 @@ class CoinFeedViewModel {
     private var coins = [Coin]()
     
     // MARK: - Private constants
-    let repository: Repository = MockRepository()
+    let repository: Repository
+    
+    // MARK: - Lifecycle
+    init(repository: Repository) {
+        self.repository = repository
+    }
     
     // MARK: - Public functions
     func coinViewModel(at index: Int) -> CoinViewModel? {

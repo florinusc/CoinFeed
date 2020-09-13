@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F3EF094250E4E50006A7D9B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF093250E4E50006A7D9B /* Storyboarded.swift */; };
+		9F3EF096250E4E64006A7D9B /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EF095250E4E64006A7D9B /* ViewModelBased.swift */; };
 		9F86AAC1250CF84400C88885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC0250CF84400C88885 /* AppDelegate.swift */; };
 		9F86AAC3250CF84400C88885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC2250CF84400C88885 /* SceneDelegate.swift */; };
 		9F86AAC5250CF84400C88885 /* CoinFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86AAC4250CF84400C88885 /* CoinFeedViewController.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F3EF093250E4E50006A7D9B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		9F3EF095250E4E64006A7D9B /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
 		9F86AABD250CF84400C88885 /* CoinFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F86AAC0250CF84400C88885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F86AAC2250CF84400C88885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F3EF092250E4E44006A7D9B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9F3EF093250E4E50006A7D9B /* Storyboarded.swift */,
+				9F3EF095250E4E64006A7D9B /* ViewModelBased.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9F86AAB4250CF84400C88885 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +225,7 @@
 		9F86AAFA250D001800C88885 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9F3EF092250E4E44006A7D9B /* Protocols */,
 				9F86AAFB250D002000C88885 /* Extensions */,
 				9F86AB06250D163E00C88885 /* CustomError.swift */,
 			);
@@ -380,12 +394,14 @@
 				9F86AAF8250CFEC800C88885 /* CoinTableViewCell.swift in Sources */,
 				9F86AB0F250D428E00C88885 /* Int+Extension.swift in Sources */,
 				9F86AB09250D16E700C88885 /* CoinFeedViewModel.swift in Sources */,
+				9F3EF096250E4E64006A7D9B /* ViewModelBased.swift in Sources */,
 				9F86AB07250D163E00C88885 /* CustomError.swift in Sources */,
 				9F86AAC3250CF84400C88885 /* SceneDelegate.swift in Sources */,
 				9F86AB0B250D39E400C88885 /* CoinViewModel.swift in Sources */,
 				9F86AB05250D156F00C88885 /* Coin.swift in Sources */,
 				9F86AB13250D456D00C88885 /* String+Extension.swift in Sources */,
 				9F86AB01250D153000C88885 /* Repository.swift in Sources */,
+				9F3EF094250E4E50006A7D9B /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

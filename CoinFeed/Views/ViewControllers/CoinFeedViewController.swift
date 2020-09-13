@@ -17,8 +17,10 @@ class CoinFeedViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - Public variables
+    var viewModel: CoinFeedViewModel!
+    
     // MARK: - Private constants
-    private let viewModel = CoinFeedViewModel()
     private weak var delegate: CoinFeedViewDelegate?
     
     // MARK: - Lifecycle
@@ -68,4 +70,8 @@ extension CoinFeedViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+}
+
+extension CoinFeedViewController: ViewModelBased, Storyboarded {
+    static var storyboardName: String { return "Main" }
 }
