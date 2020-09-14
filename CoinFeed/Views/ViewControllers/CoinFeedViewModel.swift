@@ -23,7 +23,7 @@ final class CoinFeedViewModel: ViewModel {
     private var coins = [Coin]()
     
     // MARK: - Private constants
-    let repository: Repository
+    private let repository: Repository
     
     // MARK: - Lifecycle
     init(repository: Repository) {
