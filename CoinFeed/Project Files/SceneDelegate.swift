@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let dogListViewController = CoinFeedViewController.getInstance(with: CoinFeedViewModel(repository: OnlineRepository()))
         let navigationController = UINavigationController(rootViewController: dogListViewController)
         navigationController.navigationBar.tintColor = .label
+        window?.tintColor = .label
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
